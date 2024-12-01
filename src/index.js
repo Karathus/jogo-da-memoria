@@ -13,8 +13,8 @@ let movimentos = 0;
 let primeiraCarta, segundaCarta;
 
 function criarCarta() {
-    let numeroDeCartas = Number(prompt("Quantas cartas você quer no seu jogo?"));
-    if (numeroDeCartas % 2 != 0 || numeroDeCartas <= 0){
+    let numeroDeCartas = Number(prompt("Quantas cartas, entre 4 e 14, você quer no seu jogo?"));
+    if (numeroDeCartas % 2 != 0 || numeroDeCartas < 4 || numeroDeCartas > 14){
         criarCarta();
     }
     else{
@@ -39,7 +39,7 @@ function criarCarta() {
     </li>`
         numeroDeCartas -= 2;
         i++;
-        if (i == 6) {
+        if (i == 7) {
             i = 0;
         }
     }
